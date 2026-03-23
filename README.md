@@ -11,7 +11,7 @@ no-show risk.
 
 ## Project Structure
 
-nhs-gp-dna-analysis/
+```nhs-gp-dna-analysis/
 │
 ├── data/
 │   ├── GP_DNA_Monthly_Dataset_Uncleaned.xlsx   # NHS GP monthly dataset
@@ -25,7 +25,7 @@ nhs-gp-dna-analysis/
 ├── charts/                                   # Exported visualisations
 ├── requirements.txt
 └── README.md
-
+```
 ---
 
 ## Sections
