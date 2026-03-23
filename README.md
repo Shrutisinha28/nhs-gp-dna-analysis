@@ -20,7 +20,7 @@ no-show risk.
 ├── notebooks/
 │   ├── section1_eda.ipynb                     # Demand, mode, wait, DNA analysis
 │   ├── section2_cost_analysis.ipynb           # Cost impact analysis
-│   └── section3_modelling.ipynb               # Predictive modelling
+│   └── section3_modelling.ipynb               # Predictive modelling (InProgress)
 │
 ├── charts/                                   # Exported visualisations
 ├── requirements.txt
@@ -70,7 +70,7 @@ unit cost per appointment (NHS England National Schedule of NHS Costs
 
 ---
 
-### Section 3 — Predictive Modelling
+### Section 3 — Predictive Modelling (InProgress)
 Builds and compares classification models to predict individual 
 Appointment no-show risk using the Kaggle Medical Appointment 
 No-Show dataset (110,527 appointments).
