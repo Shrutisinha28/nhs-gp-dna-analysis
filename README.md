@@ -15,14 +15,14 @@ nhs-gp-dna-analysis/
 │
 ├── data/
 │   ├── GP_DNA_Monthly_Dataset_Uncleaned.xlsx   # NHS GP monthly dataset
-│   └── KaggleV2-May-2016.csv                   # Kaggle no-show dataset
+│   └── KaggleV2-May-2016.csv                  # Kaggle no-show dataset
 │
 ├── notebooks/
-│   ├── section1_eda.ipynb                      # Demand, mode, wait, DNA analysis
-│   ├── section2_cost_analysis.ipynb            # Cost impact analysis
-│   └── section3_modelling.ipynb                # Predictive modelling
+│   ├── section1_eda.ipynb                     # Demand, mode, wait, DNA analysis
+│   ├── section2_cost_analysis.ipynb           # Cost impact analysis
+│   └── section3_modelling.ipynb               # Predictive modelling
 │
-├── charts/                                     # All exported visualisations
+├── charts/                                   # Exported visualisations
 ├── requirements.txt
 └── README.md
 
