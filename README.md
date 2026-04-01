@@ -168,21 +168,32 @@ prevent it.
 
 1. Clone the repository
 ```bash
-git clone https://github.com/yourusername/nhs-gp-dna-analysis.git
-cd nhs-gp-dna-analysis
+git clone https://github.com/your-username/your-repo-name.git
+cd your-repo-name
 ```
 
 2. Install dependencies
+   Make sure Python 3.8+ is installed, then run: 
 ```bash
-pip install -r requirements.txt
+pip install pandas numpy matplotlib seaborn scikit-learn jupyter
 ```
 
-3. Add datasets to the `/data` folder
+3. Download Dataset
+   Download the dataset from Kaggle:
+   https://www.kaggle.com/datasets/joniarroba/noshowappointments
+   Place the file in the project root directory:
+   ```bash
+   KaggleV2-May-2016.csv
+   ```
 
-4. Run notebooks in order
+4. Run notebooks
+   Start Jupyter Notebook:
 ```
-section1_eda.ipynb → section2_cost_analysis.ipynb → section3_modelling.ipynb
+jupyter notebook
 ```
+Run the notebooks in order:
+	•	NHS_GP_Service_Analysis.ipynb → Sections 1 & 2 (EDA & system-level analysis)
+	•	GP_No_Show_Prediction_Modelling.ipynb → Section 3 (predictive modelling)
 
 ---
 
