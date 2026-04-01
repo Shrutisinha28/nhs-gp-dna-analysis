@@ -37,10 +37,22 @@ and DNA rate trends.
 
 **Key Findings:**
 - 940M+ appointments analysed across 30 months (Jul 2023 – Dec 2025)
-- Demand grew 11.4% — from 28.6M to 31.8M appointments per month
-- Average DNA rate of 4.5% — stable but generating 1.43M missed appointments monthly
+- Demand grew 11.4%, from 28.6M to 31.8M appointments per month
+- Average DNA rate of 4.5%, stable but generating 1.43M missed appointments monthly
 - PCN DNA rate (7.91%) is nearly double the GP rate (4.4%)
 - Appointments booked 22+ days in advance averaged 10.6% of all bookings
+
+**Findings & Insights:**
+- Demand is growing faster than the registered patient base (11.4% vs 2.2%), 
+  the system is under increasing pressure independent of population growth
+- F2F appointments declining (68.2% → 61.8%) while video/online grew 472.5%, 
+  a structural shift in how care is delivered
+- Same-day appointments now account for 45.8% of all bookings, 
+  suggesting increasing urgency-driven demand
+- High-risk wait (22+ days) grew from 8.9% to 9.7%, 
+  a small but growing pool of appointments vulnerable to no-show
+- PCN DNA rate is consistently and structurally higher than GP, 
+  not a temporary anomaly but a systemic difference requiring targeted intervention
 
 **Charts produced:**
 - Monthly appointment volume with trend line
@@ -61,6 +73,18 @@ unit cost per appointment (NHS England National Schedule of NHS Costs
 - PCN is 1.8x more expensive per 1,000 appointments than GP (£2,372 vs £1,319)
 - High-risk wait appointments (22+ days) account for £139.7M (10.9%) of total DNA cost
 - A 10% reduction in high-risk DNAs would recover ~£14M over the period
+
+**Findings & Insights:**
+- At an average of £42.9M per month, DNA cost is not a marginal inefficiency, 
+  it is a structural drain on NHS resources at billion-pound scale
+- PCN generates disproportionate waste despite being only ~3% of total volume, 
+  scaling PCN services without addressing its DNA rate will amplify costs
+- High-risk wait appointments contribute to DNA cost roughly in proportion to 
+  their size (10.6% of appointments → 10.9% of cost), confirming they are a 
+  targetable and addressable category
+- Long booking lead times create an intervention window, reminders, 
+  confirmation calls, or predictive flagging could recover meaningful cost
+- Even a modest 10% reduction in preventable DNAs would save ~£5.6M annually
 
 **Charts produced:**
 - Monthly DNA cost bar chart with trend line
@@ -85,6 +109,36 @@ No-Show dataset (110,527 appointments).
 - Patient age
 - Medical conditions (hypertension, diabetes, alcoholism)
 - Gender, scholarship status
+
+**Model Performance:**
+
+| Model | Accuracy | No-show Recall | No-show F1 |
+|---|---|---|---|
+| Logistic Regression | 55.2% | 56% | 0.42 |
+| Random Forest | 65.7% | 24% | 0.28 |
+
+**Findings & Insights:**
+- Age and waiting days are by far the strongest predictors of no-show,  
+  accounting for 53.9% and 35.3% of feature importance respectively
+- SMS reminders, despite being a widely used intervention, ranked 4th in 
+  importance, suggesting reminders alone are insufficient for high-risk patients
+- Logistic Regression achieves better no-show recall (56%) than Random Forest (24%) 
+  despite lower overall accuracy, for the NHS use case, catching more no-shows 
+  matters more than overall accuracy
+- The model serves as a proof of concept, demonstrating that patient-level 
+  features can predict no-show risk, and that a similar model deployed on NHS 
+  data could help target interventions toward the £139.7M high-risk cost pool 
+  identified in Section 2
+- Key intervention trigger: patients with long booking lead times and no SMS 
+  confirmation are the highest-risk profile for non-attendance
+
+## Connecting the Datasets
+The NHS GP dataset (Sections 1–2) operates at national aggregate level and 
+establishes the scale and cost of the problem. The Kaggle dataset (Section 3) 
+operates at individual appointment level and demonstrates that the problem is 
+predictable. Together they form a complete analytical narrative, from 
+identifying the problem, quantifying its cost, to building a tool that could 
+prevent it.
 
 ---
 
